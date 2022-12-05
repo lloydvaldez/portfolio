@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Asset&display=swap');
+
+:root {
+    --darkPurple: #51087E;
+    --purple: #A020F0;
+    --lightPurple: #D7A1F9;
+    --black: #000;
+    --white: #FFF;
+    --grey: #ddd;
+    --transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--darkPurple);
+    font-family: 'JetBrains Mono', sans-serif;
+    color: var(--white);
+}
+
+.container {
+    padding: 50px;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    display: block;
+    font-family: 'Asset', cursive;
+    color: var(--purple);
+}
+
+p {
+    color: var(--lightPurple);
+    padding: 50px;
+}
+
+/* NAVBAR */
+
+#navbar {
+    background-color: var(--darkPurple);
+    position: fixed;
+    top: -50px;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+}
+
+#navbar a {
+    float: right;
+    display: block;
+    color: var(--lightPurple);
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#navbar a:hover {
+    background-color: var(--grey);
+    color: var(--black);
+}
+
+/* HOME SECTION */
+
+#home h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+#home p {
+    padding: 100px;
+}
+
+/* ABOUT SECTION */
+
+#about {
+
+}
+
+/* CERTIFICATION SECTION */
+
+#cert {
+
+}
+
+.modal-btn {
+    background: var(--white);
+    color: var(--darkPurple);
+    border-style: none;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.modal-btn:hover {
+    background: var(--purple);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: grid;
+    place-items: center;
+    visibility: hidden;
+    z-index: -10;
+}
+
+.open-modal {
+    visibility: visible;
+    z-index: 10;
+}
+
+.modal-container {
+    background: contain;
+    background-repeat: no-repeat;
+    width: 900px;
+    height: 692px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1em;
+    right: 1rem;
+    font-size: 2rem;
+    background: transparent;
+    border-color: transparent;
+    color: var(--purple);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close-btn:hover {
+    color: var(--lightPurple);
+    transform: scale(1.3);
+}
+
+#modal1 {
+    background-image: url("images/udemy-bootcamp-certificate.PNG");
+}
+
+#modal2 {
+    background-image: url("images/responsive-web-design-certificate.PNG");
+}
+
+#modal3 {
+    background-image: url("images/js-algorithms-and-data-structures-certificate.PNG");
+}
+
+#modal4 {
+    background-image: url("images/certifications/front-end-development-libraries.PNG");
+}
+
+/* WORK SECTION */
+
+#work {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.work-heading {
+    margin: 0;
+}
+
+article {
+    justify-content: center;
+    align-items: center;
+    display: block;
+    background: var(--purple);
+    padding: 20px;
+    margin: 0;
+    width: 365px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+
+.project-heading {
+    text-align: center;
+}
+
+.card-img {
+    object-fit: cover;
+    width: 365px;
+    height: 240px;
+    max-width: 100%;
+    border-radius: 10px;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+}
+
+.card-img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.project-info {
+    padding: 0;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.btn {
+    margin: 5px;
+    color: var(--white);
+}
+
+.btn:hover {
+    color: #51087E;
+}
+
+/* CONTACT SECTION */
+
+#contact {
+    h2 {
+        padding: 50px;
+    }
+}
+
+.contact-heading {
+    margin: 20px;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 3em;
+}
+
+.contact-details {
+    margin: 30px;
+    color: var(--lightPurple);
+}
+
+.contact-details:hover {
+    color: var(--white);
+    font-size: 2em;
+    transition: 1s ease-out;
+}
+
+footer {
+    color: var(--lightPurple);
+    text-align: center;
+}
