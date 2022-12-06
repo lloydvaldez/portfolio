@@ -16,18 +16,30 @@ function scrollFunction() {
 // when user clicks modal-btn add .open-modal to modal-overlay
 // when user clicks close-btn remove .open-modal from modal-overlay
 
-let modals = document.querySelector(".modal-overlay")
-let modalBtns = Array.from([...document.querySelectorAll(".modal-btn")])
-let closeBtns = document.querySelector(".close-btn")
+const btns = document.querySelectorAll("[data-target]")
+const closeBtn = document.querySelectorAll(".close-btn")
+const overlay = document.getElementById("overlay")
 
-for (let i = 0; i < modalBtns.length; i++) {
-    modalBtns[i].addEventListener("click", function () {
-        modals[i].classList.add("open-modal")
+
+btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        document.querySelector(btn.dataset.target).classList.add("active")
+        overlay.classList.add("active")
     })
-}
+})
 
-for (let i = 0; closeBtns.length; i++) {
-    closeBtns[i].onClick = () => {
-        modals[i].classList.remove("open-modal")
+closeBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const modal = btn.closest(".modal")
+        modal.classList.remove("active")
+        overlay.classList.remove("active")
+    })
+})
+
+window.onclick = (event) => {
+    if (event.target == overlay) {
+        const modals = document.querySelectorAll(".modal")
+        modals.forEach((modal) => modal.classList.remove("active"))
+        overlay.classList.remove("active")
     }
 }
