@@ -86,6 +86,19 @@ p {
 
 }
 
+li {
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: var(--lightPurple);
+}
+
+.about-photo {
+    width: 20%;
+    height: auto;
+    opacity: 0.5;
+    z-index: -2;
+}
+
 /* CERTIFICATION SECTION */
 
 #cert {
