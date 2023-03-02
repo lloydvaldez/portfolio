@@ -33,14 +33,13 @@ section {
 }
 
 h1 {
-    display: block;
+    margin: auto;
     font-family: 'Asset', cursive;
     color: var(--purple);
 }
 
 p {
     color: var(--lightPurple);
-    padding: 50px;
 }
 
 /* NAVBAR */
@@ -52,6 +51,7 @@ p {
     width: 100%;
     display: block;
     transition: top 0.3s;
+    opacity: 0.7;
 }
 
 #navbar a {
@@ -71,20 +71,28 @@ p {
 
 /* HOME SECTION */
 
+#home {
+    text-align: center;
+}
+
 #home h1 {
     margin: 0;
     font-size: 36px;
 }
 
 #home p {
-    padding: 100px;
+    padding: 50px;
+}
+
+.home-photo {
+    width: 20%;
+    height: auto;
+    border-radius: 50%;
+    margin: 30px;
+    border: 5px solid #ddd;
 }
 
 /* ABOUT SECTION */
-
-#about {
-
-}
 
 li {
     line-height: 1.5;
@@ -96,13 +104,34 @@ li {
     width: 20%;
     height: auto;
     opacity: 0.5;
-    z-index: -2;
+    margin: 20px;
 }
 
 /* CERTIFICATION SECTION */
 
 #cert {
+    display: flex;
+}
 
+.cert-heading {
+    margin: 20px;
+}
+
+.certs {
+    display: flex;
+    /* grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    margin: 50px; */
+}
+
+.cert-card {
+    background: var(--purple);
+    display: block;
+    text-align: center;
+    width: 200px;
+    height: 150px;
+    padding: 10px;
+    margin: 5px;
 }
 
 .btn {
@@ -172,29 +201,33 @@ li {
 
 #work {
     display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
+    /* justify-content: center; */
+    /* align-items: stretch; */
+    /* flex-wrap: wrap; */
 }
 
-.work-heading {
+.projects {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0;
     margin: 0;
+    list-style: none;
+    /* display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    margin: 0 50px; */
 }
 
 article {
     justify-content: center;
     align-items: center;
     display: block;
-    background: var(--purple);
-    padding: 20px;
+    padding: 10px;
     margin: 0;
     width: 365px;
-}
-
-.projects {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 10px;
+    height: auto;
+    border-radius: 10px;
 }
 
 .project-heading {
@@ -225,6 +258,10 @@ article {
     text-align: center;
 }
 
+.buttons a {
+    text-decoration: none;
+}
+
 .link-btn {
     margin: 5px;
     color: var(--white);
@@ -235,16 +272,6 @@ article {
 }
 
 /* CONTACT SECTION */
-
-#contact {
-    h2 {
-        padding: 50px;
-    }
-}
-
-.contact-heading {
-    margin: 20px;
-}
 
 .contact-links {
     display: flex;
@@ -267,4 +294,37 @@ article {
 footer {
     color: var(--lightPurple);
     text-align: center;
+}
+
+/* FOR MOBILE */
+
+@media only screen and (max-width: 480px) {
+    #navbar {
+        width: 100%;
+    }
+
+    #navbar a {
+        font-size: 12px;
+    }
+
+    section {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .home-photo {
+        width: 50%;
+    }
+
+    .about-photo {
+        width: 50%;
+    }
+
+    .cert-heading {
+        font-size: 12px;
+    }
+
+    .certs {
+        flex-direction: column;
+    }
 }

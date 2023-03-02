@@ -15,15 +15,18 @@
     <body>
 
         <div id="navbar">
-            <a href="#contact">Contact</a>
-            <a href="#work">Work</a>
-            <a href="#cert">Certifications</a>
-            <a href="#about">About Me</a>
-            <a href="#home">Home</a>
+            <div class="sec-links">
+                <a href="#contact">Contact</a>
+                <a href="#work">Work</a>
+                <a href="#cert">Certifications</a>
+                <a href="#about">About Me</a>
+                <a href="#home">Home</a>
+            </div>
         </div>
 
         <div class="container">
             <section id="home">
+                <img src="images/headshot-1-1.jpg" alt="home-photo" class="home-photo">
                 <h1>i'm lloyd valdez</h1>
                 <p>a front-end developer</p>
             </section>
@@ -36,6 +39,7 @@
                     <li>Started to learn web development in late 2021, after deciding i needed a career that I enjoy doing.</li>
                     <li>I'm initially planning to become a front end developer and eventually go into full stack development in the future.</li>
                     <li>Always having something new to learn, having a way to creatively express yourself/ ideas that help people and most of all loving what you do is why im a developer.</li>
+                    <li>Some things that I enjoy are spending time wih my dog, cooking, and hiking.</li>
                 </ul>
                 <img class="about-photo" src="images/kassie-me.JPEG" alt="kassie-me">
             </section>
@@ -45,8 +49,12 @@
                     <h1>CERTIFICATIONS</h1>
                 </div>
 
-                <p>Web Development BootCamp Certificate</p>
-                    <button class="btn" data-target="#modal1">Show</button>
+                <div class="certs">
+
+                    <div class="cert-card">
+                        <p>Web Development BootCamp Certificate</p>
+                        <button class="btn" data-target="#modal1">Show</button>
+                    </div>
 
                     <div class="modal" id="modal1">
                         <button class="btn close-btn">
@@ -55,8 +63,10 @@
                         <img src="images/certifications/udemy-bootcamp-certificate.PNG" alt="udemy-bootcamp-certificate">
                     </div>
 
-                <p>Responsive Web Design</p>
-                    <button class="btn" data-target="#modal2">Show</button>
+                    <div class="cert-card">
+                        <p>Responsive Web Design</p>
+                        <button class="btn" data-target="#modal2">Show</button>
+                    </div>
 
                     <div class="modal" id="modal2">
                         <button class="btn close-btn">
@@ -65,8 +75,10 @@
                         <img src="images/certifications/responsive-web-design-certificate.PNG" alt="responsive-web-design-certificate">
                     </div>
 
-                    <p>JavaScript Algorithms and Data Structures</p>
-                    <button class="btn" data-target="#modal3">Show</button>
+                    <div class="cert-card">
+                        <p>JavaScript Algorithms and Data Structures</p>
+                        <button class="btn" data-target="#modal3">Show</button>
+                    </div>
 
                     <div class="modal" id="modal3">
                         <button class="btn close-btn">
@@ -75,8 +87,10 @@
                         <img src="images/certifications/js-algorithms-and-data-structures-certificate.PNG" alt="js-algorithms-and-data-structures-certificate">
                     </div>
 
-                    <p>Front End Development Libraries</p>
-                    <button class="btn" data-target="#modal4">Show</button>
+                    <div class="cert-card">
+                        <p>Front End Development Libraries</p>
+                        <button class="btn" data-target="#modal4">Show</button>
+                    </div>
 
                     <div class="modal" id="modal4">
                         <button class="btn close-btn">
@@ -85,6 +99,8 @@
                         <img src="images/certifications/front-end-development-libraries.PNG" alt="front-end-development-libraries">
                     </div>
 
+                </div>
+
             <div id="overlay"></div>
             </section>
 
@@ -92,6 +108,7 @@
                 <div class="work-heading">
                     <h1>WORK</h1>
                 </div>
+                
                 <div class="projects">
 
                     <article>
@@ -184,6 +201,26 @@
                                     <i class='link-btn fas fa-external-link-alt'></i>
                                 </a>
                                 <a href="https://github.com/tonytoocozy/survey-form">
+                                    <i class='link-btn fas fa-code'></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article>
+                        <h3 class="project-heading">QR Code Generator</h3>
+                        <div>
+                            <a href="https://qr-code-generator-lv.netlify.app/">
+                                <img class="card-img" src="images/work/qr-code-generator.PNG" alt="qr-code-generator-preview">
+                            </a>
+                            <p class="project-info">A web app that creates a QR code in real time.</p>
+
+                            <div class="buttons">
+                                <a href="https://qr-code-generator-lv.netlify.app/">
+                                    <i class='link-btn fas fa-external-link-alt'></i>
+                                </a>
+                                <a href="https://github.com/tonytoocozy/qr-code-generator">
                                     <i class='link-btn fas fa-code'></i>
                                 </a>
                             </div>
