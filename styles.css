@@ -33,7 +33,7 @@ section {
 }
 
 h1 {
-    margin: auto;
+    margin: 20px;
     font-family: 'Asset', cursive;
     color: var(--purple);
 }
@@ -277,6 +277,7 @@ article {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
     font-size: 3em;
 }
 
