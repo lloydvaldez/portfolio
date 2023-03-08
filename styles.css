@@ -52,6 +52,7 @@ p {
     display: block;
     transition: top 0.3s;
     opacity: 0.7;
+    z-index: 1;
 }
 
 #navbar a {
@@ -109,19 +110,12 @@ li {
 
 /* CERTIFICATION SECTION */
 
-#cert {
-    display: flex;
-}
-
 .cert-heading {
     margin: 20px;
 }
 
 .certs {
     display: flex;
-    /* grid-template-columns: auto auto auto auto;
-    gap: 10px;
-    margin: 50px; */
 }
 
 .cert-card {
@@ -143,7 +137,7 @@ li {
 }
 
 .btn:hover {
-    background: var(--purple);
+    background: var(--darkPurple);
     color: var(--white);
     cursor: pointer;
 }
@@ -166,8 +160,8 @@ li {
 }
 
 .modal {
-    width: 900px;
-    height: 692px;
+    width: auto;
+    height: auto;
     position: fixed;
     top: -50%;
     left: 50%;
@@ -240,17 +234,18 @@ article {
     height: 240px;
     max-width: 100%;
     border-radius: 10px;
-    -webkit-transition-property: all;
-    -webkit-transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease;
+    transition: all 0.3s ease;
+    filter: grayscale(1);
 }
 
 .card-img:hover {
     cursor: pointer;
     transform: scale(1.2);
+    filter: grayscale(0);
 }
 
 .project-info {
+    text-align: center;
     padding: 0;
 }
 
@@ -268,7 +263,7 @@ article {
 }
 
 .link-btn:hover {
-    color: var(--darkPurple);
+    color: var(--lightPurple);
 }
 
 /* CONTACT SECTION */
@@ -287,9 +282,10 @@ article {
 }
 
 .contact-details:hover {
+    margin: auto;
     color: var(--white);
     font-size: 2em;
-    transition: 1s ease-out;
+    transition: 0.3s ease-out;
 }
 
 footer {
@@ -327,5 +323,17 @@ footer {
 
     .certs {
         flex-direction: column;
+    }
+
+    .modal {
+        width: 100%;
+    }
+
+    .modal.active {
+    top: 50%;
+    }
+
+    .modal img {
+    width: 100%;
     }
 }
